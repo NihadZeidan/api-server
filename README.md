@@ -5,22 +5,38 @@
 Author: Nihad Zeidan
 
 ### tests report
+[Heroku Clothes](https://nihad-api-server.herokuapp.com/clothes)
+[Heroku Food](https://nihad-api-server.herokuapp.com/food)
+[GitHub PR]()
+[GitHub Actions]()
 
-.env requirements
+
+### .env requirements
 PORT - Port Number
-Running the app
+MONGODB_URI=mongodb+srv://admin:admin00@lab04.difc8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+### Running the app
 npm start
-Endpoint: /status
-Returns Object
+
+
+### Endpoints: `/clothes` and `/food` 
+
+
+### Input Objects
 
 {
-  "domain": "john-api-server.demo.herokuapp.com",
-  "status": "running",
-  "port": 42123
+    _id: { type: Number, required: true },
+    name: { type: String, required: true },
+    price: { type: String, required: true },
+    availability: { type: Boolean, required: true }
 }
-Tests
-Unit Tests: npm run test
-Lint Tests: npm run lint
+
+
+### Tests
+Unit Tests: `npm test`
+
+
+
 UML
-(Created with diagrams)
+![UML]()
 
