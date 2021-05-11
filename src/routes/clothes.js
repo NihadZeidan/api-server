@@ -48,7 +48,7 @@ router.get('/clothes', async(req, res) => {
 
 
 router.get('/clothes/:id', async(req, res) => {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
 
     let getOneItem = await newClothes.get(id);
 
@@ -59,7 +59,7 @@ router.get('/clothes/:id', async(req, res) => {
 
 
 router.put('/clothes/:id', async(req, res) => {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
 
     let obj = req.body;
 
@@ -72,7 +72,7 @@ router.put('/clothes/:id', async(req, res) => {
 
 router.delete('/clothes/:id', async(req, res) => {
 
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
     let deleted = await newClothes.delete(id);
 
     res.status(202).json(deleted);
