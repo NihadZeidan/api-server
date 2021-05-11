@@ -31,9 +31,10 @@ class Collection {
     }
 
     delete(id) {
-        this.model.findByIdAndDelete({ _id: id });
 
-        return null
+        let toDelete = this.model.findByIdAndDelete({ _id: id });
+
+        return toDelete
     }
 }
 
