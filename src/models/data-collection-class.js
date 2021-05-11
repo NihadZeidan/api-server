@@ -3,15 +3,14 @@
 
 class Collection {
     constructor(model) {
-        this.id = 0;
         this.model = model;
     }
 
 
     create(obj) {
         let newItem = new this.model(obj);
-        newItem._id = ++this.id;
-        return newItem.save();
+        newItem.save();
+        return newItem
     }
 
 
@@ -25,15 +24,14 @@ class Collection {
 
     }
 
+
     update(id, obj) {
         let updated = this.model.findByIdAndUpdate(id, obj, { new: true });
         return updated
-
     }
 
     delete(id) {
-
-        let toDelete = this.model.findByIdAndDelete(id);
+        this.model.findByIdAndDelete({ _id: id });
 
         return null
     }

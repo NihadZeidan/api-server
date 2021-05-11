@@ -23,7 +23,7 @@ Author: Nihad Zeidan
 
 PORT - Port Number
 
-MONGODB_URI=mongodb+srv://admin:admin00@lab04.difc8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+MONGODB_URI=mongodb://localhost:27017/lab04
 
 ### Running the app
 
@@ -38,11 +38,11 @@ MONGODB_URI=mongodb+srv://admin:admin00@lab04.difc8.mongodb.net/myFirstDatabase?
 ### Input Objects
 
 {
-    name: { type: String, required: true },
+    `name: { type: String, required: true },`
 
-    price: { type: String, required: true },
+   `price: { type: String, required: true },`
 
-    availability: { type: Boolean, required: true }
+  `availability: { type: Boolean, required: true }`
 }
 
 

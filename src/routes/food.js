@@ -45,7 +45,7 @@ router.get('/food', async(req, res) => {
 
 
 router.get('/food/:id', async(req, res) => {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
 
     let getOneItem = await newFood.get(id);
 
@@ -56,7 +56,7 @@ router.get('/food/:id', async(req, res) => {
 
 
 router.put('/food/:id', async(req, res) => {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
 
     let obj = req.body;
 
@@ -69,7 +69,7 @@ router.put('/food/:id', async(req, res) => {
 
 router.delete('/food/:id', async(req, res) => {
 
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
     let deleted = await newFood.delete(id);
 
     res.status(202).json(deleted);
