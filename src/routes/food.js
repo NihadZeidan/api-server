@@ -14,12 +14,6 @@ let newFood = new Collection(foodModel);
 const mongoose = require("mongoose");
 const MONGODB_URI = process.env.MONGODB_URI;
 
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-}).then(() => console.log("Connecting to MongoDB food")).catch((err) => console.error(err));
 
 
 router.post('/food', async(req, res) => {
