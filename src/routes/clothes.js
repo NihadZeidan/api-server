@@ -33,7 +33,9 @@ router.post('/clothes', async(req, res) => {
 router.get('/clothes', async(req, res) => {
 
     let readAll = await newClothes.get();
-
+    readAll.sort((a, b) => {
+        a['createdAt'] - b['createdAt']
+    });
     res.status(200).json(readAll);
 
 });
