@@ -1,12 +1,10 @@
 'use strict';
-
-
 require('dotenv').config();
 const mongoose = require('mongoose');
 const server = require('./src/server.js');
 
 const DataBase_URI = process.env.MONGODB_URI
-const PROT = process.env.PORT
+const port = process.env.PORT
 
 
 mongoose.connect(DataBase_URI, {
@@ -16,5 +14,5 @@ mongoose.connect(DataBase_URI, {
     useCreateIndex: true
 }).then(() => {
     console.log("Connected to DB")
-    server.start(PROT);
+    server.start(port);
 }).catch((err) => console.error(err));
