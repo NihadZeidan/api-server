@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 
 const toDoSchema = new mongoose.Schema({
   complete: { type: Boolean, default: false },
-  text: { type: String, required: true },
-  difficulty: { type: String, required: true },
-  assignee: { type: String, required: true },
+  text: { type: String, required: true, default: "No Task Added !" },
+  difficulty: { type: String, required: true, default: "50" },
+  assignee: { type: String, required: true, default: "No Assignee Added !" },
   dueDate: { type: Date },
 });
 
