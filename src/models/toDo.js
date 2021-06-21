@@ -6,7 +6,7 @@ const toDoSchema = new mongoose.Schema({
   text: { type: String, required: true, default: "No Task Added !" },
   difficulty: { type: String, required: true, default: "50" },
   assignee: { type: String, required: true, default: "No Assignee Added !" },
-  dueDate: { type: Date },
+  dueDate: { type: String },
 });
 
 const toDo = mongoose.model("toDo", toDoSchema);
