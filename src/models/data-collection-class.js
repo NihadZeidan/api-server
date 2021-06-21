@@ -27,15 +27,14 @@ class Collection {
 
     update(id, obj) {
         let updated = this.model.findByIdAndUpdate(id, obj, { new: true });
-        
-        return this.model.find({});
+        return updated
     }
 
     delete(id) {
 
         let toDelete = this.model.findByIdAndDelete({ _id: id });
 
-        return this.model.find({});
+        return toDelete
     }
 }
 
