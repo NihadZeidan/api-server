@@ -10,7 +10,7 @@ class Collection {
     create(obj) {
         let newItem = new this.model(obj);
         newItem.save();
-        return newItem
+        return this.model.find({});
     }
 
 
@@ -27,14 +27,15 @@ class Collection {
 
     update(id, obj) {
         let updated = this.model.findByIdAndUpdate(id, obj, { new: true });
-        return updated
+        
+        return this.model.find({});
     }
 
     delete(id) {
 
         let toDelete = this.model.findByIdAndDelete({ _id: id });
 
-        return toDelete
+        return this.model.find({});
     }
 }
 
