@@ -10,7 +10,7 @@ class Collection {
     create(obj) {
         let newItem = new this.model(obj);
         newItem.save();
-        return this.model.find({});
+        return newItem
     }
 
 
