@@ -1,9 +1,7 @@
 'use strict';
-
 const express = require('express');
+
 const app = express();
-const cors = require("cors")
-app.use(cors);
 app.use(express.json());
 
 const notFoundHandler = require('../src/error-handlers/404.js');
